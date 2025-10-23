@@ -30,6 +30,6 @@
         </tr>
       {/each}
     </tbody>
-  </table>
+</table>
 </div>
 {/if}
