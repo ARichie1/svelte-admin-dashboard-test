@@ -38,11 +38,11 @@ const createUsersStore = () => {
     },
 
     updateUser(id, patch) {
-      update(list => list.map(u => u.id === id ? {...u, ...patch} : u));
+      update(list => list.map(user => user.id === id ? {...user, ...patch} : user));
     },
 
     remove(id) {
-      update(list => list.filter(u => u.id !== id));
+      update(list => list.filter(user => user.id !== id));
     },
 
     clear() {
