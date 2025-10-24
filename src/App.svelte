@@ -41,8 +41,8 @@
     deleting = false
   }
 
-  const handleSearch = (q) => {
-    searchQuery = q
+  const handleSearch = (query) => {
+    searchQuery = query
   }
 
   // Use Reactive Variable a User On EDIT or A Template To Add A User

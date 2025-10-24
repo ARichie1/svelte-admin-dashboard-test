@@ -4,23 +4,6 @@
   let search = $state()
   let showMenu = $state(false)
 
-  let clientScreenSize = $state({
-    height: window.screen.height,
-    width: window.screen.width
-  })
-
-  // $effect(() => {
-  //   window.addEventListener("resize", (e) => {
-  //     clientScreenSize = {...clientScreenSize,
-  //       {width: window.screen.width, height: window.screen.height }
-  //     }
-  //      console.log(JSON.stringify(clientScreenSize));
-  //   })
-  // })
-  
- 
-  
-
   // Dark / Light Toggle
   let theme = $state(localStorage.getItem('theme') || 'light');
   
@@ -44,13 +27,19 @@
     <h2>SVELTE ADMIN DASHBOARD</h2>
   </div>
 
-  {#if showMenu}
-    <div class="header-right">
+    <div class="header-right bg" style="display: n;">
       <input class="input" placeholder="Search..." bind:value={search} oninput={() => onSearch?.(search)} />
       <button class="btn ghost small add-user" onclick={() => onAdd?.()}>+ Add User</button>
       <button class="dark-toggle" onclick={toggleTheme}>{theme === 'light' ? '🌙' : '☀️'}</button>
     </div>
-  {/if}
+
+    {#if showMenu}
+      <div class="header-right sm" style="display: n;">
+        <input class="input" placeholder="Search..." bind:value={search} oninput={() => onSearch?.(search)} />
+        <button class="btn ghost small add-user" onclick={() => onAdd?.()}>+ Add User</button>
+        <button class="dark-toggle" onclick={toggleTheme}>{theme === 'light' ? '🌙' : '☀️'}</button>
+      </div>
+    {/if}
 
   <button class="menu-btn" onclick={() => showMenu = !showMenu}>📑</button>
 </div>
@@ -61,6 +50,8 @@
         display:flex; gap:8px;
         align-items:center;
     }
+    .bg{display: flex}
+    .sm{display: none}
     .input{
         width: 70%; height: 45px;
     }
@@ -81,7 +72,7 @@
       .header-right {
         position: absolute;
         top: 12%; right: 0%;
-        width: 60%; height: 15rem;
+        width: 15rem; height: 15rem;
         display:flex; gap:8px;
         align-items:center; justify-content: space-evenly;
         flex-direction: column;
@@ -99,5 +90,7 @@
         background: transparent;
         border: none;
       }
+      .sm{display: flex}
+      .bg{display: none}
     }
 </style>
