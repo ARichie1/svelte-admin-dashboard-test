@@ -47,7 +47,6 @@ body{
   overflow: scroll;
   width: 100%;
 }
-
 .card{
   background:var(--card);
   border-radius:10px;
@@ -149,3 +148,4 @@ body{
 }
 
 .delete{background: red;}
+

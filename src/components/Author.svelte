@@ -1,5 +1,5 @@
 <div class="author-container">
-    Akinmade Richard
+    BY Akinmade Richard
 </div>
 <style>
     .author-container{

@@ -80,6 +80,11 @@
         border-bottom-left-radius: 6px;
         transition: 1s ease-in-out;
       }
+      .input::placeholder{
+        color: var(--card)
+      }
+
+      
       .input, .add-user{
         width:85%
       }
