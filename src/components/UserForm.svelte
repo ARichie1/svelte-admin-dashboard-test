@@ -39,9 +39,22 @@
 </form>
 
 <style>
+    form{
+      font-weight: bold;
+    }
+    input{
+      width: 100%;height: 50px; 
+    }
     .form-buttons-container{
+        width: 100%; height: 30px;
         display:flex; gap:8px;
-        justify-content:flex-end;
-        margin-top:10px
+        justify-content:space-evenly;
+        margin-top:20px;
+        
+    }
+
+    .form-buttons-container button{
+      width: 120px;height: 40px;
+      font-weight: bold; 
     }
 </style>
