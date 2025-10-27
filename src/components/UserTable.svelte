@@ -7,7 +7,7 @@
 {#if $users.length === 0}
   <div class="empty card">No users found.</div>
 {:else}
-<div class="table-container">
+<div class="table-container scrollable">
     <table class="table card">
         <thead>
             <tr>
@@ -20,13 +20,20 @@
         <tbody>
         {#each (query ? $users.filter(user => user.name.toLowerCase().includes(query) || user.email.toLowerCase().includes(query)) : $users) as user (user.id)}
             <tr>
-            <td>{user.name}</td>
-            <td>{user.email}</td>
-            <td><span class="role" style="text-transform: uppercase;">{user.role}</span></td>
-            <td style="display:flex;gap:8px;">
-                <button class="btn ghost small" onclick={() => onEdit?.(user.id)}>Edit</button>
-                <button class="btn small delete" onclick={() => onDelete?.(user)}>Delete</button>
-            </td>
+                <td class="name-column">{user.name}</td>
+                <td class="email-column">{user.email}</td>
+                <td><span class="role" style="text-transform: uppercase;">{user.role}</span></td>
+                <td>
+                    <div class="actions-container">
+                        <button class="btn ghost small" onclick={() => {
+                            onEdit?.(user.id)
+                            console.log(user.id);
+                            
+                            }}>
+                            Edit</button>
+                        <button class="btn small delete" onclick={() => onDelete?.(user)}>Delete</button>
+                    </div>
+                </td>
             </tr>
         {/each}
         </tbody>

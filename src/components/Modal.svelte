@@ -10,3 +10,9 @@
     </div>
   </div>
 {/if}
+
+<style>
+  .modal{
+    background: var(--gradient);
+  }
+</style>
