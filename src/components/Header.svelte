@@ -87,7 +87,7 @@
       display:flex; gap:8px;
       align-items:center; justify-content: space-evenly;
       flex-direction: column;
-      background: var(--gradient);
+      background: var(--bg);
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;
       transition: 1s ease-in-out;
