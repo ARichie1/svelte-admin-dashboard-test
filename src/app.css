@@ -6,7 +6,7 @@
   --accent-bg: #2563eb;
   --accent: #8b5cf6;
   --input-focus: #fff;
-  --role: rgba(37,99,235,0.12);
+  --role: #000;
   --gradient: linear-gradient(130deg,  #8b5cf6, #fff, #fff,  #4f46e5);
 }
 
@@ -17,7 +17,7 @@
   --muted: #9aa4b2;
   --accent: #8b5cf6;
   --input-focus: #4c1d95;
-  --role: #60a5fa;
+  --role: #fff;
   --gradient: linear-gradient(130deg,  #8b5cf6, #111827, #111827, #4f46e5);
 }
 
@@ -141,8 +141,8 @@ body{
 .role{
     padding:4px 8px;
     border-radius:10px;
-    background: var(--gradient);
-    color:var(--accent);
+    background: var(--accent);
+    color:var(--role);
     font-weight:600;
 }
 
