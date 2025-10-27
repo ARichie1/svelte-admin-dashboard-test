@@ -48,8 +48,8 @@
       </div>
     {/if}
 
-  <button class="search-btn" onclick={() => {showSearch = !showSearch; showMenu = false}}>🔍</button>
-  <button class="menu-btn" onclick={() => {showMenu = !showMenu; showSearch = false}}>📑</button>
+  <button class="search-btn mobile" onclick={() => {showSearch = !showSearch; showMenu = false}}>🔍</button>
+  <button class="menu-btn mobile" onclick={() => {showMenu = !showMenu; showSearch = false}}>📑</button>
 </div>
 
 <style>
@@ -79,6 +79,7 @@
       justify-content: center;
   }
   .menu-btn{display: none ;}
+  .mobile{display:none}
   @media screen and (max-width:600px){
     .mobileMenu {
       position: absolute;
@@ -122,6 +123,7 @@
       background: transparent;
       border: none;
     }
+    .mobile{display: flex}
     .sm{display: flex}
     .bg{display: none}
   }
