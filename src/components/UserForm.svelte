@@ -1,4 +1,4 @@
-<script>
+²<script>
   import { derived } from "svelte/store";
 
   let {initial = { name: '', email: '', role: '' }, 
@@ -153,7 +153,7 @@
       border-radius: 6px;
       padding: 8px;
       width: 100%;
-      /* transition: border-color 0.1s ease, box-shadow 0.1s ease; */
+      color: var(--text)
     }
     input:focus {
       outline: none;
