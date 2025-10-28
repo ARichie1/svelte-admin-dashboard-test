@@ -33,9 +33,10 @@
         height: 40px; width: 200px;
         display: flex; align-items: center;
         justify-content: center;
-        background: var(--role);
+        background: var(--accent);
         text-align: center;
         border-radius: 7px;
+        color: var(--text)
     }
     .button-container{
         height: 50px;
