@@ -145,6 +145,7 @@
       position: relative;
       width: 100%; height: 50px;
       cursor: pointer;
+      color: var(--text)
     }
 
     input {
