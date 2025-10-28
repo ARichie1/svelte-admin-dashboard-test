@@ -60,7 +60,7 @@
 
     // Email Field
     if (!email.trim()) {errs.email = 'Email is required.'; showMessage.emailError = true}
-    else if (!/\S+@\S+\.\S+/.test(email)) {errs.email = 'Email is invalid.'; showMessage.emailError = true}
+    else if (!/\S+@\S+\.\S+/.test(email)) {errs.email = 'Email is invalid, email must be like this - richardakinmade3@gmail.com'; showMessage.emailError = true}
     else if ((existingEmails).includes(email.trim()) && !isEditing)
       { errs.email = 'Email already exists.'; showMessage.emailError = true}
     else if(!errors.email){
