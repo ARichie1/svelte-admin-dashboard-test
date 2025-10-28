@@ -1,4 +1,4 @@
-²<script>
+<script>
   import { derived } from "svelte/store";
 
   let {initial = { name: '', email: '', role: '' }, 
@@ -147,7 +147,9 @@
       cursor: pointer;
       color: var(--text)
     }
-
+    .input-container select option{
+      color: var(--text)
+    }
     input {
       width: 100%;height: 50px;
       border: 2px solid #ccc;
